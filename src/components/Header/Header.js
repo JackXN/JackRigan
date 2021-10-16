@@ -1,23 +1,41 @@
 import React from 'react'
-import {Box,Container, Flex,Text, Image} from '@chakra-ui/react';
+import {Box,Container, Flex,Text, Image, StylesProvider} from '@chakra-ui/react';
 
 
 
 
 function Header() {
     return (
-       <Box>
-            <Image src={'/LogoOne.png'} alt='Header Logo'/>
-            <Text as='h1'>Jack Rigan Is A Web Developer & Designer From Norway</Text>
-        <Box>
-            <ul>
-                <li>Portfolio</li>
-                <li>About</li>
-                <li>Blog</li>
-            </ul>
-        </Box>
-       </Box>
+       <>
+       <Box sx={styles.container}>
+            <Image src={'/LogoOne.png'} alt='Header Logo' sx={styles.headerImg}/>
+            <Text as='h1' sx={styles.headerText}>Jack Rigan Is A Web Developer & Designer In Salt Lake City</Text>
+            </Box>
+     </>
     )
 }
+
+
+const styles = {
+    container: {
+        display: 'flex',
+        flexDirection: ['column'],
+        alignItems:'center',
+        padding: '20px',
+        justifyContent: 'center',
+        textAlign:'center'
+
+    },
+    headerImg: {
+        height: '50px',
+        width: '90px',
+    },
+    headerText: {
+        fontSize: '17px',
+        mt: '20px',
+
+    }
+}
+
 
 export default Header
