@@ -26,7 +26,26 @@ const data = [
       imgSrc: '/ApexLogo.png',
       title: 'Apex Security',
       description: 'Landing Page For A Security Website'
-  }
+  },
+
+  {
+      id:  5,
+      imgSrc: 'RestaurantLogo.png',
+      title: 'Restaurant Reservation App',
+      description: 'Dashboard for managing Dinner reservations and table seating'
+    },
+    {
+        id:6,
+        imgSrc: 'PAXLogo.png',
+        title: 'PAX SMP',
+        description: 'Landing Page For A Minecraft SMP Server'
+    },
+    {
+        id: '7',
+        imgSrc: 'DecoderLogo.png',
+        title: 'The Decoder Ring',
+        description: 'An App Designed To Encrypt And Decrypt Secret Messages'
+    }
 ];
 
 function ProjectCard() {
