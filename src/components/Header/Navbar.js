@@ -13,7 +13,7 @@ function Navbar() {
         <ListItem sx={styles.linkItem}>
         <Link href='/'>
             <a className={router.pathname == '/' ? 'active' : ''}>
-            Portfolio
+           Portfolio
             </a>
             </Link>
         </ListItem>
