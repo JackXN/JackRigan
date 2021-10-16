@@ -4,10 +4,11 @@ function blog() {
     return (
         <>
         <Header/>
+        
         <div>
             This is the blog page
         </div>
-        </>
+    </>
     )
 }
 

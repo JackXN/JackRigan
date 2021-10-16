@@ -39,6 +39,6 @@ export default function Home() {
 const styles = {
   wrapper: {
     backgroundColor : '#E8ECEF',
-    height: '100vh'
+    height: '100%'
   }
 }

@@ -13,7 +13,7 @@ const data = [
     },
 {
     id: 2,
-    imgSrc:'/UberProject.jpeg',
+    imgSrc:'/AmazonLogo.jpeg',
     title: 'Another Project',
     description: 'This is a description of the project',
 },
@@ -27,10 +27,10 @@ function ProjectCard() {
             {data.map((item) => (
                         <Box sx={styles.card} key={item.id}>
                 <Box key={item.id}>
-                <Image src={item.imgSrc} alt='hello' key={item.id} height='100px' width='100px'/>
+                <Image src={item.imgSrc} alt='hello' key={item.id} width='200px' height='200px'/>
                 <Text as='h1' sx={styles.title}>{item.title}</Text>
                 <Text as='p' sx={styles.description}>{item.description}</Text>
-                <a style={{color:'orange', fontSize: '13px'}}>Read More</a>
+                <a style={{color:'#F0615C', fontSize: '13px'}}>Read More</a>
                 </Box>
 </Box>
             ))}
@@ -55,10 +55,13 @@ const styles = {
     padding: '20px',
     textAlign: 'center',
     margin: '20px',
+
   },
   container: {
+      pt: '0px',
     mt: "10px",
-    padding: "20px",
+    pl: [null, null, null,'200px'],
+    pr: [null, null, null,'200px'],
   },
   projectImg: {},
 
