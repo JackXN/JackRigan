@@ -1,6 +1,6 @@
 import React from 'react'
 import {Box,Container, Flex,Text, Image, StylesProvider} from '@chakra-ui/react';
-
+import Navbar from './Navbar';
 
 
 
@@ -11,6 +11,7 @@ function Header() {
             <Image src={'/LogoOne.png'} alt='Header Logo' sx={styles.headerImg}/>
             <Text as='h1' sx={styles.headerText}>Jack Rigan Is A Web Developer & Designer In Salt Lake City</Text>
             </Box>
+           <Navbar/>
      </>
     )
 }
@@ -33,7 +34,6 @@ const styles = {
     headerText: {
         fontSize: '17px',
         mt: '20px',
-
     }
 }
 
