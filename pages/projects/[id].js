@@ -1,8 +1,15 @@
+import { useRouter } from 'next/router'
+import {Text} from '@chakra-ui/react';
+import Project from './project';
+
+
 const ProjectDetails = () => {
+
+const router = useRouter();
+const {id} = router.query;
+
     return (
-        <div>
-            <h1>Details page</h1>
-        </div>
+   <h1>Hello</h1>
     )
 }
 
