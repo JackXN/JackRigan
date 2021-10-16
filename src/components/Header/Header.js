@@ -34,6 +34,8 @@ const styles = {
     headerText: {
         fontSize: '17px',
         mt: '20px',
+        fontFamily: 'Montserrat, sans-serif',
+
     }
 }
 

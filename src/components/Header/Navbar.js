@@ -4,12 +4,11 @@ import {Box, ListItem, UnorderedList} from '@chakra-ui/react';
 function Navbar() {
     return (
         <Box sx={styles.navbar}>
-       <UnorderedList style={{listStyle:'none'}}>
+       <UnorderedList style={{listStyle:'none'}} sx={styles.list}>
            <ListItem sx={styles.linkItem}><Link href='/'>Portfolio</Link></ListItem>
            <ListItem sx={styles.linkItem}><Link href='/about'>About</Link></ListItem>
            <ListItem sx={styles.linkItem}><Link href='/blog'>Blog</Link></ListItem>
        </UnorderedList>
-
         </Box>
     )
 }
@@ -18,13 +17,16 @@ function Navbar() {
 const styles = {
     navbar: {
     color:'red',
-    display: 'flex',
-    flexDirection:'row',
-    border: 'solid red 1px'
     },
 linkItem : {
-    color:'blue',
-    border: 'solid purple 2px'
+    color:'black',
+    fontFamily: 'Bebas Neue, cursive',
+    fontWeight: 'bold',
+    fontSize: '21px'
+},
+list: {
+    display: 'flex',
+    justifyContent: 'space-evenly'
 }
 }
 
