@@ -1,7 +1,10 @@
+import Header from '../src/components/Header/Header';
+
 function about () {
     return (
         <>
-        <h1>Hello</h1>
+      <Header/>
+      <h1>Hello</h1>
         </>
     )
 }
