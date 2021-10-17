@@ -4,9 +4,14 @@ import Image from 'next/image';
 import Header from '../src/components/Header/Header';
 import { Box, Container } from '@chakra-ui/layout';
 import ProjectCard from '../src/components/ProjectCard';
-
+const axios = require('axios')
 
 export default function Home() {
+
+  axios.get('localhost:3000/projects')
+  .then((res) => console.log(res))
+
+
   return (
     <>
     <Box sx={styles.wrapper}> 

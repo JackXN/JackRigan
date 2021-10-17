@@ -1,7 +1,25 @@
+
+const data = [
+    {
+        id: 1,
+        title: 'hello'
+    },
+    {
+        id: 2,
+        title: 'hello two'
+    }
+]
+
+
+
 const Project = () => {
     return (
         <div>
-        <h1>Hello</h1>
+            {data.map((item )=> (
+                <div key={item.id}> 
+                {item.title}
+                </div>
+            ))}
         </div>
     )
 
