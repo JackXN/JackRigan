@@ -1,10 +1,17 @@
+
+import {useEffect, useState} from 'react';
+
+
+// NEXT JS METHOD
+
 export const getStaticPaths = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/users');
+  const res = await fetch('https://my-json-server.typicode.com/JackXN/API-Rigan/projects');
   const data = await res.json();
 
-const paths = data.map((item) => {
+
+const paths = data.map(ninja => {
   return {
-    params: {id: item.id.toString()}
+    params: {id: ninja.id.toString()}
   }
 })
 
@@ -15,28 +22,25 @@ return {
 
 }
 
-
-
-
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id);
+  const res = await fetch('https://my-json-server.typicode.com/JackXN/API-Rigan/projects' + id);
   const data = await res.json();
 
 
 return {
-  props: {item: data}
+  props: {ninja: data}
 }
 
 }
 
 
-const Details = ({item}) => {
+const Details = ({ninja}) => {
+
+  
   return (
     <div>
-      <p>{item.id}</p>
-      <h1>{item.name}</h1>
-      <p>{item.description}</p>
+<h1>hello</h1>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import { Box, Text } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import Link from "next/link";
 
-const data = [
+ export const data = [
   {
     id: 1,
     imgSrc: "/LogoYeah.png",
@@ -71,7 +71,7 @@ function ProjectCard() {
             <Image
               src={item.imgSrc}
               alt="hello"
-              key={item.id}
+              key={item.id} 
               height="200px"
               sx={styles.projectImg}
             />
