@@ -8,58 +8,58 @@ const data = [
     imgSrc: "/LogoYeah.png",
     title: "Communiti Live Chat",
     description: "An Awesome Live Chat Application",
-    repoURL: '',
-      liveUrl: '',
+    repoURL: "",
+    liveUrl: "",
   },
   {
     id: 2,
     imgSrc: "/GigaChad.png",
     title: "Giga Chad V.1",
     description: "Portal Page For The GigaChad Network",
-    repoURL: '',
-      liveUrl: '',
+    repoURL: "",
+    liveUrl: "",
   },
   {
     id: 3,
     imgSrc: "/TimerLogo.png",
     title: "Pomodoro Timer",
     description: "Pomodoro Timer For Efficiency",
-    repoURL: '',
-      liveUrl: '',
+    repoURL: "",
+    liveUrl: "",
   },
   {
-      id: 4,
-      imgSrc: '/ApexLogo.png',
-      title: 'Apex Security',
-      description: 'Landing Page For A Security Website',
-      repoURL: '',
-      liveUrl: '',
+    id: 4,
+    imgSrc: "/ApexLogo.png",
+    title: "Apex Security",
+    description: "Landing Page For A Security Website",
+    repoURL: "",
+    liveUrl: "",
   },
 
   {
-      id:  5,
-      imgSrc: 'RestaurantLogo.png',
-      title: 'Restaurant Reservation App',
-      description: 'Dashboard for managing Dinner reservations and table seating',
-      repoURL: '',
-      liveUrl: '',
-    },
-    {
-        id:6,
-        imgSrc: 'PAXLogo.png',
-        title: 'PAX SMP',
-        description: 'Landing Page For A Minecraft SMP Server',
-        repoURL: '',
-      liveUrl: '',
-    },
-    {
-        id: '7',
-        imgSrc: 'DecoderLogo.png',
-        title: 'The Decoder Ring',
-        description: 'An App Designed To Encrypt And Decrypt Secret Messages',
-        repoURL: '',
-      liveUrl: '',
-    }
+    id: 5,
+    imgSrc: "RestaurantLogo.png",
+    title: "Restaurant Reservation App",
+    description: "Dashboard for managing Dinner reservations and table seating",
+    repoURL: "",
+    liveUrl: "",
+  },
+  {
+    id: 6,
+    imgSrc: "PAXLogo.png",
+    title: "PAX SMP",
+    description: "Landing Page For A Minecraft SMP Server",
+    repoURL: "",
+    liveUrl: "",
+  },
+  {
+    id: "7",
+    imgSrc: "DecoderLogo.png",
+    title: "The Decoder Ring",
+    description: "An App Designed To Encrypt And Decrypt Secret Messages",
+    repoURL: "",
+    liveUrl: "",
+  },
 ];
 
 function ProjectCard() {
@@ -72,7 +72,7 @@ function ProjectCard() {
               src={item.imgSrc}
               alt="hello"
               key={item.id}
-            height='200px'
+              height="200px"
               sx={styles.projectImg}
             />
             <Text as="h1" sx={styles.title}>
@@ -85,7 +85,7 @@ function ProjectCard() {
               as="p"
               style={{ color: "#F06D6B", fontFamily: "Poppins,sans-serif" }}
             >
-              <Link href={`/projects/` + item.id}> Read More</Link>
+              <Link key={item.id} href={"/projects/" + item.id} > Read More</Link>
             </Text>
           </Box>
         </Box>

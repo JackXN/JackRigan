@@ -8,10 +8,10 @@ export const  projects = [
         id: 2,
         title: 'This is test title two',
         description: 'Nothing works better'
-    },
+    },                                        
     {
         id: 3,
         title: 'Here is another one',
         description:'Another one'
     }
-]
+]   

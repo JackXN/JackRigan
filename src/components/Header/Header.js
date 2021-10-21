@@ -34,7 +34,7 @@ const styles = {
     headerText: {
         fontSize: '17px',
         mt: '20px',
-        fontFamily: "Bebas Neue, cursive",
+        fontFamily: 'Montserrat, sans-serif',
 
     }
 }
