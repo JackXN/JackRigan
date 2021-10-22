@@ -1,49 +1,39 @@
 
-import {useEffect, useState} from 'react';
-
-
-// NEXT JS METHOD
-
 export const getStaticPaths = async () => {
-  const res = await fetch('https://my-json-server.typicode.com/JackXN/API-Rigan/projects');
-  const data = await res.json();
+     const res = await fetch ('https://my-json-server.typicode.com/JackXN/API-Rigan/projects')
+    const data = await res.json();
+    // console.log(data)
 
+    const paths = data.map(item => {
+        return {
+            params: { id: item.id.toString() }
+        }
+    })
+    return {
+        paths,
+        fallback: false
+    }
+    }
 
-const paths = data.map(ninja => {
-  return {
-    params: {id: ninja.id.toString()}
-  }
-})
-
-return {
-  paths,
-  fallback:false,
-}
-
-}
 
 export const getStaticProps = async (context) => {
-  const id = context.params.id;
-  const res = await fetch('https://my-json-server.typicode.com/JackXN/API-Rigan/projects' + id);
-  const data = await res.json();
+    const id = context.params.id;
+    const res = await fetch(`https://my-json-server.typicode.com/JackXN/API-Rigan/projects/${id}`)
+    const data = await res.json();
 
-
-return {
-  props: {ninja: data}
-}
-
-}
-
-
-const Details = ({ninja}) => {
-
-  
-  return (
-    <div>
-<h1>hello</h1>
-    </div>
-  )
+    return {
+        props: { project: data }
+    }
 }
 
 
-export default Details;
+
+
+const ProjectDetail = ({project}) => {
+    return (
+  <h1>{project.title}</h1>
+    )
+}
+
+
+export default ProjectDetail;

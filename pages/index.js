@@ -7,7 +7,11 @@ import { Image } from "@chakra-ui/react";
 import Link from "next/link";
 import data from '../public/db';
 
-export default function Home() {
+
+
+
+
+export default function Home({projects}) {
 
   return (
     <>
@@ -38,6 +42,8 @@ export default function Home() {
           />
         </Head>
         <Header/>
+
+
         <Box sx={styles.container}>
       {data.map((item) => (
         <Box sx={styles.card} key={item.id}>
@@ -69,6 +75,19 @@ export default function Home() {
       </Box>
     </>
   );
+}
+
+
+export async function getStaticProps() {
+  const project = await fetch('https://my-json-server.typicode.com/JackXN/API-Rigan/projects')
+  .then((res) => res.json());
+  console.log(project)
+
+  return {
+    props: {
+      project
+    }
+  }
 }
 
 
