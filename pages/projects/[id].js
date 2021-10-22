@@ -1,6 +1,6 @@
 import {Box, Text, Flex} from '@chakra-ui/react';
 import Header from '../../src/components/Header/Header';
-import Logo from '../../public/LogoYeah.png';
+import Logo from '../../public/projectbanner.jpg';
 import Image from 'next/image'
 
 export const getStaticPaths = async () => {
@@ -28,6 +28,8 @@ export const getStaticProps = async (context) => {
   );
   const data = await res.json();
 
+
+
   return {
     props: { project: data },
   };
@@ -41,7 +43,9 @@ const ProjectDetail = ({ project }) => {
 <Flex sx={styles.topBox}>
     <Text as='h1' sx={styles.title}>{project.title}</Text>
     <Text as='h3' sx={styles.description}>{project.description}</Text>
-<Image src={project.imgOne} alt=''/>
+    <Box>
+        <Image src={Logo} alt=''/>
+    </Box>
 </Flex>
    </Box>
 
@@ -72,8 +76,7 @@ const styles = {
 
     },
     description: {
-pl: '150px',
-pr: '150px'
+
     },
     subDescription: {
  color: 'black',
