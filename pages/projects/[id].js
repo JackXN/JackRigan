@@ -1,5 +1,7 @@
-import {Image, Box, Text, Flex} from '@chakra-ui/react'
-import Header from '../../src/components/Header/Header'
+import {Box, Text, Flex} from '@chakra-ui/react';
+import Header from '../../src/components/Header/Header';
+import Logo from '../../public/LogoYeah.png';
+import Image from 'next/image'
 
 export const getStaticPaths = async () => {
   const res = await fetch(
@@ -39,7 +41,7 @@ const ProjectDetail = ({ project }) => {
 <Flex sx={styles.topBox}>
     <Text as='h1' sx={styles.title}>{project.title}</Text>
     <Text as='h3' sx={styles.description}>{project.description}</Text>
-    
+<Image src={project.imgOne} alt=''/>
 </Flex>
    </Box>
 
@@ -59,7 +61,7 @@ const styles = {
         textAlign:'center',
         pt:'50px',
         pb: '50px',
-        height: '100vh'
+        height: '100%'
     },
     title: {
     fontFamily: "Bebas Neue, cursive",
@@ -70,12 +72,21 @@ const styles = {
 
     },
     description: {
-
+pl: '150px',
+pr: '150px'
     },
     subDescription: {
  color: 'black',
  mt: '20px',
-
+    },
+    imgOne: {
+        mt:'50px',
+        maxHeight: '500px',
+        width: '100%'
+    },
+    imgOneContainer: {
+        width: '100%',
+        height:'100%',
     }
 }
 
