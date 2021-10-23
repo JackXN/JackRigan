@@ -1,7 +1,9 @@
 import {Box, Text, Flex, List, ListItem, UnorderedList} from '@chakra-ui/react';
 import Header from '../../src/components/Header/Header';
 import Logo from '../../public/uberHero.jpeg';
-import Image from 'next/image'
+import Image from 'next/image';
+import { Icon } from '@iconify/react';
+import TechStack from '../../src/components/TechStack';
 
 export const getStaticPaths = async () => {
   const res = await fetch(
@@ -9,7 +11,6 @@ export const getStaticPaths = async () => {
   );
   const data = await res.json();
   // console.log(data)
-
   const paths = data.map((item) => {
     return {
       params: { id: item.id.toString() },
@@ -39,30 +40,31 @@ const ProjectDetail = ({ project }) => {
   return(
       <>
       <Header/>
-   <Box style={{backgroundColor: '#1B1F23', marginTop: '50px'}}>
+   <Box style={{backgroundColor: '#1B1F23', marginTop: '50px', display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems:'center', justifyContent: 'center'}}>
 <Flex sx={styles.topBox}>
     <Text as='h1' sx={styles.title}>{project.title}</Text>
     <Text as='h3' sx={styles.description}>{project.description}</Text>
     <Text as='p'  sx={styles.built}>This Project Was Built With</Text>    
 </Flex>
-<Box sx={styles.technologies}>
-<UnorderedList style={{color: 'white', listStyle: 'none'}}>
-<ListItem>Hello</ListItem>
-<ListItem>Hello</ListItem>
-<ListItem>Hello</ListItem>
-<ListItem>Hello</ListItem>
-</UnorderedList>
 
-
-
+<Box sx={styles.wizard}> 
+<Box sx={styles.wizardStep}>
+<Box sx={styles.wizardDot}>
+  <Box sx={styles.wizardNumber}>
+  <Icon style={{color:'white', fontSize: '35px'}} icon="akar-icons:react-fill"vFlip={true} />
+  </Box>
+  <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px'}}/></Box>
+  <Box sx={styles.wizardNumber}>
+  <Icon style={{color:'white', fontSize: '35px'}} icon="akar-icons:react-fill" vFlip={true} />
+  </Box>
+  <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px'}}/></Box>
+  
 </Box>
-
-
+</Box>
+</Box>
 {/* <Box sx={styles.banner}>
         <Image src={Logo} alt=''/>
     </Box> */}
-
-
    </Box>
 
    </>
@@ -96,7 +98,7 @@ const styles = {
     },
     description: {
  fontFamily: 'Arapey, serif',
- fontSize: '20px'
+ fontSize: '27px'
     },
 
     subDescription: {
@@ -122,14 +124,72 @@ const styles = {
       color: 'darkgray', 
       fontStyle: 'italic', 
       fontWeight: 'lighter',
-      fontSize: ['18px']
+      fontSize: ['23px']
     },
     technologies: {
-      justifyContent: 'center',
+      
+      
+    },
+    icons: {
+      color: 'white', 
+      listStyle: 'none', 
+      display: 'flex', 
+      fontSize: '90px',
+      mt: '30px',
+ 
+
+    },
+    iconItem: {
+      ml: '-4px',
+    },
+    iconImage: {
+     boxShadow: '0 0 0 4px #fff',
+     alignItems:'center',
+     display: 'flex',
+     justifyContent: 'center',
+     borderRadius: '999px'
+    },
+    wizard: {
+      display: 'flex',
+
+          },
+          wizardStep: {
+
+"&:first-child": {
+ backgroundColor: 'transparent',
+},
+
+"&:last-child": {
+  backgroundColor: 'transparent',
+}
+
+
+          },
+    wizardConnector: {
+flex: '1',
+height: '1px',
+// backgroundColor: [null, null, null, '#F06D6A']
+    },
+
+    wizardNumber: {
+alignItems: 'center',
+display: 'flex',
+justifyContent: 'center',
+backgroundColor: 'rgba(0,0,0,0.3)',
+borderRadius: '9999px',
+height:'110px',
+width: '110px',
+ml: '4px',
+mr: '4px',
+    },
+    wizardDot: {
       alignItems:'center',
       display: 'flex',
-      flexDirection: ['column', 'column', 'row'],
-    }
+      flexDirection: ['column', null, null, 'row'],
+      justifyContent: 'center',
+      flexWrap: 'wrap'
+    },
+
 }
 
 export default ProjectDetail;
