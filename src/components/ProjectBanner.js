@@ -1,14 +1,28 @@
-
-
+import { Box,Text } from "@chakra-ui/layout";
+import Bg from '../../public/bannerbg.png'
 
 const ProjectBanner = () => {
 
 
     return (
-        <div>
-            <h1>Hello</h1>
-        </div>
+        <>
+<Box sx={styles.container}>
+
+</Box>
+
+        </>
     )
+}
+
+
+const styles = {
+    container: {
+        background: `${Bg}`,
+        backgroundPosition: 'center',
+        backgroundSize:'cover',
+        backgroundRepeat: 'no-repeat',
+        height: '100vh'
+    }
 }
 
 export default ProjectBanner;

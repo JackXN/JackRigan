@@ -10,14 +10,20 @@ return (
 <Box sx={styles.wizardStep}>
 <Box sx={styles.wizardDot}>
   <Box sx={styles.wizardNumber}>
-  <Icon style={{color:'white', fontSize: '35px'}} icon="akar-icons:react-fill"vFlip={true} />
+  <Icon style={{color:'white', fontSize: '35px',}} icon="akar-icons:react-fill"vFlip={true} />
   </Box>
-  <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px'}}/></Box>
+  <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px', transform: 'rotate(90deg)'}}/></Box>
   <Box sx={styles.wizardNumber}>
   <Icon style={{color:'white', fontSize: '35px'}} icon="akar-icons:react-fill" vFlip={true} />
   </Box>
-  <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px'}}/></Box>
-  
+  <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px', transform: 'rotate(90deg)'}}/></Box>
+  <Box sx={styles.wizardNumber}>
+  <Icon style={{color:'white', fontSize: '35px'}} icon="akar-icons:react-fill" vFlip={true} />
+  </Box>
+  <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px', transform: 'rotate(90deg)'}}/></Box>
+  <Box sx={styles.wizardNumber}>
+  <Icon style={{color:'white', fontSize: '35px'}} icon="akar-icons:react-fill" vFlip={true} />
+  </Box>
 </Box>
 </Box>
 </Box>
@@ -46,7 +52,9 @@ const styles = {
       wizardConnector: {
   flex: '1',
   height: '1px',
+  
   // backgroundColor: [null, null, null, '#F06D6A']
+
       },
   
       wizardNumber: {

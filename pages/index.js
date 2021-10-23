@@ -65,7 +65,6 @@ export default function Home({ projects }) {
                   style={{ color: "#F06D6B", fontFamily: "Poppins,sans-serif" }}
                 >
                   <Link key={item.id} href={"/projects/" + item.id}>
-                    {" "}
                     Read More
                   </Link>
                 </Text>
