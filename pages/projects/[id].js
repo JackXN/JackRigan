@@ -1,6 +1,6 @@
 import {Box, Text, Flex} from '@chakra-ui/react';
 import Header from '../../src/components/Header/Header';
-import Logo from '../../public/projectbanner.jpg';
+import Logo from '../../public/uberHero.jpeg';
 import Image from 'next/image'
 
 export const getStaticPaths = async () => {
@@ -41,12 +41,12 @@ const ProjectDetail = ({ project }) => {
       <Header/>
    <Box>
 <Flex sx={styles.topBox}>
-    <Text as='h1' sx={styles.title}>{project.title}</Text>
+    <Text as='h1' sx={styles.title} style={{backgroundColor: '#F06D6A', padding: '20px'}}>{project.title}</Text>
     <Text as='h3' sx={styles.description}>{project.description}</Text>
-    <Box>
+</Flex>
+<Box sx={styles.banner}>
         <Image src={Logo} alt=''/>
     </Box>
-</Flex>
    </Box>
 
    </>
@@ -56,14 +56,16 @@ const ProjectDetail = ({ project }) => {
 
 const styles = {
     topBox: {
-        padding: '20px',
+      pt:'50px',
+      pl: ['40px' , null, '120px', '250px'],
+      pr: ['40px' , null, '100px', '250px'],
         background: '#1B1F23',
         color: 'white',
         flexDirection: 'column',
         alignItems:'center',
         justifyContent: 'center',
         textAlign:'center',
-        pt:'50px',
+      
         pb: '50px',
         height: '100%'
     },
@@ -76,7 +78,7 @@ const styles = {
 
     },
     description: {
-
+ fontFamily: 'Montserrat, sans-serif',
     },
     subDescription: {
  color: 'black',
@@ -90,6 +92,9 @@ const styles = {
     imgOneContainer: {
         width: '100%',
         height:'100%',
+    },
+    banner: {
+      width: '100%',
     }
 }
 
