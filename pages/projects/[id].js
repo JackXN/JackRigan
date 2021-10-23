@@ -46,25 +46,7 @@ const ProjectDetail = ({ project }) => {
     <Text as='h3' sx={styles.description}>{project.description}</Text>
     <Text as='p'  sx={styles.built}>This Project Was Built With</Text>    
 </Flex>
-
-<Box sx={styles.wizard}> 
-<Box sx={styles.wizardStep}>
-<Box sx={styles.wizardDot}>
-  <Box sx={styles.wizardNumber}>
-  <Icon style={{color:'white', fontSize: '35px'}} icon="akar-icons:react-fill"vFlip={true} />
-  </Box>
-  <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px'}}/></Box>
-  <Box sx={styles.wizardNumber}>
-  <Icon style={{color:'white', fontSize: '35px'}} icon="akar-icons:react-fill" vFlip={true} />
-  </Box>
-  <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px'}}/></Box>
-  
-</Box>
-</Box>
-</Box>
-{/* <Box sx={styles.banner}>
-        <Image src={Logo} alt=''/>
-    </Box> */}
+<TechStack/>
    </Box>
 
    </>
@@ -148,46 +130,6 @@ const styles = {
      display: 'flex',
      justifyContent: 'center',
      borderRadius: '999px'
-    },
-    wizard: {
-      display: 'flex',
-
-          },
-          wizardStep: {
-
-"&:first-child": {
- backgroundColor: 'transparent',
-},
-
-"&:last-child": {
-  backgroundColor: 'transparent',
-}
-
-
-          },
-    wizardConnector: {
-flex: '1',
-height: '1px',
-// backgroundColor: [null, null, null, '#F06D6A']
-    },
-
-    wizardNumber: {
-alignItems: 'center',
-display: 'flex',
-justifyContent: 'center',
-backgroundColor: 'rgba(0,0,0,0.3)',
-borderRadius: '9999px',
-height:'110px',
-width: '110px',
-ml: '4px',
-mr: '4px',
-    },
-    wizardDot: {
-      alignItems:'center',
-      display: 'flex',
-      flexDirection: ['column', null, null, 'row'],
-      justifyContent: 'center',
-      flexWrap: 'wrap'
     },
 
 }
