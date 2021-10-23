@@ -1,4 +1,4 @@
-import {Box, Text, Flex} from '@chakra-ui/react';
+import {Box, Text, Flex, List, ListItem, UnorderedList} from '@chakra-ui/react';
 import Header from '../../src/components/Header/Header';
 import Logo from '../../public/uberHero.jpeg';
 import Image from 'next/image'
@@ -39,14 +39,30 @@ const ProjectDetail = ({ project }) => {
   return(
       <>
       <Header/>
-   <Box>
+   <Box style={{backgroundColor: '#1B1F23', marginTop: '50px'}}>
 <Flex sx={styles.topBox}>
-    <Text as='h1' sx={styles.title} style={{backgroundColor: '#F06D6A', padding: '20px'}}>{project.title}</Text>
+    <Text as='h1' sx={styles.title}>{project.title}</Text>
     <Text as='h3' sx={styles.description}>{project.description}</Text>
+    <Text as='p'  sx={styles.built}>This Project Was Built With</Text>    
 </Flex>
-<Box sx={styles.banner}>
+<Box sx={styles.technologies}>
+<UnorderedList style={{color: 'white', listStyle: 'none'}}>
+<ListItem>Hello</ListItem>
+<ListItem>Hello</ListItem>
+<ListItem>Hello</ListItem>
+<ListItem>Hello</ListItem>
+</UnorderedList>
+
+
+
+</Box>
+
+
+{/* <Box sx={styles.banner}>
         <Image src={Logo} alt=''/>
-    </Box>
+    </Box> */}
+
+
    </Box>
 
    </>
@@ -65,7 +81,6 @@ const styles = {
         alignItems:'center',
         justifyContent: 'center',
         textAlign:'center',
-      
         pb: '50px',
         height: '100%'
     },
@@ -74,12 +89,16 @@ const styles = {
     fontSize: '50px', 
     fontWeight: '400',
     lineHeight: '60px',
-    margin: '40px'
+    margin: '40px',
+    backgroundColor: '#F06D6A',
+    padding: '20px'
 
     },
     description: {
- fontFamily: 'Montserrat, sans-serif',
+ fontFamily: 'Arapey, serif',
+ fontSize: '20px'
     },
+
     subDescription: {
  color: 'black',
  mt: '20px',
@@ -95,6 +114,21 @@ const styles = {
     },
     banner: {
       width: '100%',
+      mt:'150px'
+    },
+    built: {
+      fontFamily: 'Arapey, serif', 
+      marginTop:'50px', 
+      color: 'darkgray', 
+      fontStyle: 'italic', 
+      fontWeight: 'lighter',
+      fontSize: ['18px']
+    },
+    technologies: {
+      justifyContent: 'center',
+      alignItems:'center',
+      display: 'flex',
+      flexDirection: ['column', 'column', 'row'],
     }
 }
 
