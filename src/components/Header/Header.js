@@ -32,9 +32,10 @@ const styles = {
         width: '90px',
     },
     headerText: {
-        fontSize: '17px',
+        fontSize: '15px',
         mt: '20px',
-        fontFamily: 'Montserrat, sans-serif',
+        fontFamily: 'Quicksand, san-serif',
+        fontWeight: 'bold'
 
     }
 }

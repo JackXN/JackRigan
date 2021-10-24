@@ -30,13 +30,12 @@ function Navbar() {
 
 const styles = {
   navbar: {
- 
   },
   linkItem: {
 
-    fontFamily: "Bebas Neue, cursive",
-    fontWeight: "bold",
+fontFamily: 'Quicksand, san-serif',
     fontSize: "21px",
+    fontWeight: '600'
   },
   list: {
     display: "flex",

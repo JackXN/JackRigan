@@ -96,7 +96,7 @@ function ProjectCard() {
 
 const styles = {
   card: {
-    background: "white",
+    background: "#ffff",
     display: "flex",
     flexDirection: ["column"],
     justifyContent: "center",
