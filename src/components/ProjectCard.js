@@ -1,66 +1,9 @@
 import { Box, Text } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import Link from "next/link";
+// import data from '../../public/db';
 
- export const data = [
-  {
-    id: 1,
-    imgSrc: "/LogoYeah.png",
-    title: "Communiti Live Chat",
-    description: "An Awesome Live Chat Application",
-    repoURL: "",
-    liveUrl: "",
-  },
-  {
-    id: 2,
-    imgSrc: "/GigaChad.png",
-    title: "Giga Chad V.1",
-    description: "Portal Page For The GigaChad Network",
-    repoURL: "",
-    liveUrl: "",
-  },
-  {
-    id: 3,
-    imgSrc: "/TimerLogo.png",
-    title: "Pomodoro Timer",
-    description: "Pomodoro Timer For Efficiency",
-    repoURL: "",
-    liveUrl: "",
-  },
-  {
-    id: 4,
-    imgSrc: "/ApexLogo.png",
-    title: "Apex Security",
-    description: "Landing Page For A Security Website",
-    repoURL: "",
-    liveUrl: "",
-  },
-
-  {
-    id: 5,
-    imgSrc: "RestaurantLogo.png",
-    title: "Restaurant Reservation App",
-    description: "Dashboard for managing Dinner reservations and table seating",
-    repoURL: "",
-    liveUrl: "",
-  },
-  {
-    id: 6,
-    imgSrc: "PAXLogo.png",
-    title: "PAX SMP",
-    description: "Landing Page For A Minecraft SMP Server",
-    repoURL: "",
-    liveUrl: "",
-  },
-  {
-    id: "7",
-    imgSrc: "DecoderLogo.png",
-    title: "The Decoder Ring",
-    description: "An App Designed To Encrypt And Decrypt Secret Messages",
-    repoURL: "",
-    liveUrl: "",
-  },
-];
+ 
 
 function ProjectCard() {
   return (
@@ -70,7 +13,7 @@ function ProjectCard() {
           <Box sx={styles.imageContainer} key={item.id}>
             <Image
               src={item.imgSrc}
-              alt="hello"
+              alt={item.title}
               key={item.id} 
               height="200px"
               sx={styles.projectImg}
@@ -129,7 +72,8 @@ const styles = {
     margin: "20px",
     fontWeight: "bold",
     fontSize: ["20px", "30px"],
-    fontFamily: "Bebas Neue, cursive",
+    color: 'orange',
+    fontFamily: 'Quicksand, san-serif',
     letterSpacing: "2px",
     mb: "0",
   },

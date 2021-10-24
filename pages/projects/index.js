@@ -7,7 +7,7 @@ import Link from "next/link";
 export const getStaticProps = async () => {
     const res = await fetch ('https://my-json-server.typicode.com/JackXN/API-Rigan/projects')
 const data = await res.json();
-  console.log(data)
+  // console.log(data)
 
     return {
         props: { projects: data }

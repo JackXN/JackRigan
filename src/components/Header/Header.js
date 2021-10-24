@@ -35,7 +35,7 @@ const styles = {
         fontSize: '15px',
         mt: '20px',
         fontFamily: 'Quicksand, san-serif',
-        fontWeight: 'bold'
+        fontWeight: '500'
 
     }
 }

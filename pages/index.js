@@ -2,7 +2,6 @@
 import Head from "next/head";
 import Header from "../src/components/Header/Header";
 import { Box, Container, Text } from "@chakra-ui/react";
-import ProjectCard from "../src/components/ProjectCard";
 import { Image } from "@chakra-ui/react";
 import Link from "next/link";
 import data from "../public/db";
@@ -104,7 +103,7 @@ const styles = {
     height: "100%",
   },
   card: {
-    background: "white",
+    background: "#ffff",
     display: "flex",
     flexDirection: ["column"],
     justifyContent: "center",
@@ -130,12 +129,12 @@ const styles = {
     mb: "30px",
     mt: "20px",
     fontSize: ["15px", "18px"],
-    fontFamily: "Poppins, sans-serif",
+    // fontFamily: "Poppins, sans-serif",
+    fontFamily: 'Quicksand,san-serif'
   },
   title: {
     textTransform: "uppercase",
     margin: "20px",
-    fontWeight: "bold",
     fontSize: ["20px", "30px"],
     fontFamily: "Bebas Neue, cursive",
     letterSpacing: "2px",
