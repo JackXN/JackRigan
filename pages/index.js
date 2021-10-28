@@ -5,7 +5,7 @@ import { Box, Container, Text } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import Link from "next/link";
 import data from "../public/db";
-
+import Footer from "../src/components/Footer";
 export default function Home({ projects }) {
   return (
     <>
@@ -27,7 +27,6 @@ export default function Home({ projects }) {
             href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@200;300;400;500&display=swap"
             rel="stylesheet"
           />
-
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
@@ -41,12 +40,12 @@ export default function Home({ projects }) {
             rel="stylesheet"
           />
 
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" />
-<link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-
-
-
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Quicksand:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <Header />
         <Box sx={styles.container}>
@@ -79,6 +78,7 @@ export default function Home({ projects }) {
           ))}
         </Box>
         );
+        <Footer />
       </Box>
     </>
   );
@@ -104,9 +104,9 @@ const styles = {
   },
   card: {
     background: "#ffff",
-    display: "flex",
-    flexDirection: ["column"],
-    justifyContent: "center",
+    // display: "flex",
+    // flexDirection: ["column"],
+    // justifyContent: "center",
     alignItems: "center",
     border: "solid lightgray 1px",
     padding: "20px",
@@ -129,8 +129,8 @@ const styles = {
     mb: "30px",
     mt: "20px",
     fontSize: ["15px", "18px"],
-    // fontFamily: "Poppins, sans-serif",
-    fontFamily: 'Quicksand,san-serif'
+    fontFamily: "Poppins, sans-serif",
+    fontFamily: "Quicksand,san-serif",
   },
   title: {
     textTransform: "uppercase",

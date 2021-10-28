@@ -7,6 +7,12 @@ const ProjectBanner = () => {
     return (
         <>
 <Box sx={styles.container}>
+<Box sx={styles.content}>
+<Box></Box>
+
+
+</Box>
+
 
 </Box>
 
