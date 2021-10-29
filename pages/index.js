@@ -77,7 +77,6 @@ export default function Home({ projects }) {
             </Box>
           ))}
         </Box>
-        );
         <Footer />
       </Box>
     </>
@@ -129,7 +128,7 @@ const styles = {
     mb: "30px",
     mt: "20px",
     fontSize: ["15px", "18px"],
-    fontFamily: "Poppins, sans-serif",
+    // fontFamily: "Poppins, sans-serif",
     fontFamily: "Quicksand,san-serif",
   },
   title: {

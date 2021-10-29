@@ -56,6 +56,13 @@ const data = [
       repoURL: "",
       liveUrl: "",
     },
+    {
+      id: '8',
+      imgSrc: 'DLogo.jpeg',
+      title: 'Devnicks',
+      description: 'A web development and design service website',
+      
+    }
   ];
 
 

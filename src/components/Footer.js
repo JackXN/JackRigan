@@ -1,26 +1,35 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text,Link } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
+import { UnorderedList, ListItem } from "@chakra-ui/react";
 
 
 const Footer = () => {
-    return (
-<Box sx={styles.footer}>
-<ul style={{display: 'flex'}}>
-    <li>riganjack40@gmail.com</li>
-    <Box sx={styles.wizardConnector}><Icon icon="ci:dot-01-xs"  style={{fontSize: '20px', }}/></Box>
-    <li>Dribble</li>
-    <Box sx={styles.wizardConnector}><Icon icon="ci:dot-01-xs"  style={{fontSize: '20px', }}/></Box>
-    <li>Twitter</li>
-    <Box sx={styles.wizardConnector}><Icon icon="ci:dot-01-xs"  style={{fontSize: '20px', }}/></Box>
-    <li>LinkedIn</li>
-</ul>
-</Box>
-    )
-}
-
+  return (
+    <Box sx={styles.footer}>
+      <UnorderedList sx={styles.listContainer}>
+        <ListItem sx={styles.listItem}><Link>LinkedIn</Link></ListItem>
+        <ListItem sx={styles.listItem}><Link>Dribble</Link></ListItem>
+        <ListItem sx={styles.listItem}><Link>Twitter</Link></ListItem>
+      </UnorderedList>
+    </Box>
+  );
+};
 
 const styles = {
- 
+  listContainer: {
+    listStyle: "none",
+    display: "flex",
+    padding: '100px',
+    textAlign:'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    
+  },
+
+listItem : {
+mr: ['20px']
+    
 }
+};
 
 export default Footer;
