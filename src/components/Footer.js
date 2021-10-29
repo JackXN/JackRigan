@@ -1,16 +1,17 @@
 import { Box, Text,Link } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
 import { UnorderedList, ListItem } from "@chakra-ui/react";
-
+import {AiFillLinkedin as LinkedIn, AiFillTwitterSquare as Twitter, AiFillGithub as Github} from 'react-icons/ai';
 
 const Footer = () => {
   return (
     <Box sx={styles.footer}>
       <UnorderedList sx={styles.listContainer}>
-        <ListItem sx={styles.listItem}><Link>LinkedIn</Link></ListItem>
-        <ListItem sx={styles.listItem}><Link>Dribble</Link></ListItem>
-        <ListItem sx={styles.listItem}><Link>Twitter</Link></ListItem>
+        <ListItem sx={styles.listItem}><Link href='https://www.linkedin.com/in/jack-rigan/'><LinkedIn/></Link></ListItem>
+        <ListItem sx={styles.listItem}><Link href='https://github.com/JackXN'><Github/></Link></ListItem>
+        <ListItem sx={styles.listItem}><Link><Twitter/></Link></ListItem>
       </UnorderedList>
+      <Text as='h3'>Copyright @2021 Jack Rigan. All Rights Reserved.</Text>
     </Box>
   );
 };
@@ -25,10 +26,16 @@ const styles = {
     alignItems: 'center',
     
   },
-
 listItem : {
-mr: ['20px']
-    
+mr: ['20px'],
+fontSize: '40px'
+},
+footer: {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems:'center',
+  justifyContent: 'center',
+  padding: '20px'
 }
 };
 
