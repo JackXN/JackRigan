@@ -28,7 +28,12 @@ const styles = {
   },
 listItem : {
 mr: ['20px'],
-fontSize: '40px'
+fontSize: '40px',
+'&:hover': {
+  transform: 'translateY(-5px)',
+  transition: 'transform 250ms',
+color: '#F06D6A'
+}
 },
 footer: {
   display: 'flex',
