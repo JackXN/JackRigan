@@ -1,7 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import Link from "next/link";
-// import data from '../../public/db';
 
  
 
