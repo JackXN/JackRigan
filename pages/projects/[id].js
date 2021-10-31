@@ -6,7 +6,7 @@ import { Icon } from '@iconify/react';
 import TechStack from '../../src/components/TechStack';
 import ProjectBanner from '../../src/components/ProjectBanner';
 import Bg from '../../public/bannerbg.png'
-
+import Head from 'next/head'
 export const getStaticPaths = async () => {
   const res = await fetch(
     "https://my-json-server.typicode.com/JackXN/API-Rigan/projects"
@@ -41,7 +41,11 @@ export const getStaticProps = async (context) => {
 const ProjectDetail = ({ project }) => {
   return(
       <>
+          <Head>
+         <title>Jack Rigan - {project.title}</title>
+    </Head>
       <Header/>
+
    <Box style={{backgroundColor: '#1B1F23', marginTop: '50px', display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems:'center', justifyContent: 'center'}}>
 <Flex sx={styles.topBox}>
     <Text as='h1' sx={styles.title}>{project.title}</Text>

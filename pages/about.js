@@ -8,24 +8,39 @@ function about() {
     <>
       <Header />
       <Box sx={styles.wrapper}>
-      <Box sx={styles.container}>
-        <Box sx={styles.title}>
-          <Text as="h1"> Jack Rigan is a full stack web developer</Text>
+        <Box sx={styles.container}>
+          <Box sx={styles.title}>
+            <Text as="h1"> Jack Rigan is a full stack web developer</Text>
+          </Box>
+          <Box sx={styles.img}>
+            <Image src={Portrait} alt="jack rigan" />
+          </Box>
         </Box>
-        <Box sx={styles.img}>
-          <Image src={Portrait} alt="simon pan" />
-        </Box>
-      </Box>
 
-
-{/* TEXT CONTAINER */}
-      <Box sx={styles.textContainer}>
-        <Box sx={styles.aboutText}>
-<Text as='h1' style={{fontFamily: "Bebas Neue, cursive", fontSize: '32px'}}> Hi, I'm Jack </Text>
-<Text as='p' style={{fontFamily: 'Montserrat, sans-serif', fontWeight: '500'}}>I am a front-end web developer & Designer born in Tønsberg
- Norway, currently residing in salt lake city Utah. My interest in web development sparked a few years ago shortly after my 18th birthday. </Text>
+        {/* TEXT CONTAINER */}
+        <Box sx={styles.textContainer}>
+          <Box sx={styles.aboutText}>
+            <Text
+              as="h1"
+              style={{ fontFamily: "Bebas Neue, cursive", fontSize: "32px" }}
+            >
+              {" "}
+              Hi, I'm Jack{" "}
+            </Text>
+            <Text
+              as="p"
+              style={{
+                fontFamily: "Montserrat, sans-serif",
+                fontWeight: "500",
+              }}
+            >
+              I am a front-end web developer & Designer born in Tønsberg Norway,
+              currently residing in salt lake city Utah. My interest in web
+              development sparked a few years ago shortly after my 18th
+              birthday. I began self teaching HTML CSS and Javascript and after about 6 months of going through courses on Udemy and several other learning platforms i knew i wanted to take it a step further.
+            </Text>
+          </Box>
         </Box>
-      </Box>
       </Box>
     </>
   );
@@ -38,10 +53,11 @@ const styles = {
     justifyContent: "space-between",
     display: "flex",
     flexDirection: "row",
-    backgroundColor: "#E8ECEF",
+    backgroundColor: "#1B1F24",
   },
   wrapper: {
-    padding: ['20px']
+    padding: ["20px"],
+    // backgroundColor: "#E8EDEE",
   },
   img: {},
   title: {
@@ -54,10 +70,11 @@ const styles = {
     ml: "150px",
   },
   aboutText: {
-  pt: '125px',
-  fontFamily: 'Barlow Condensed, sans-serif',
-  },
+    pt: "125px",
+    fontFamily: "Barlow Condensed, sans-serif",
+    backgroundColor: "#E8EDEE",
 
+  },
 };
 
 export default about;
