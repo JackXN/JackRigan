@@ -19,26 +19,35 @@ function about() {
 
         {/* TEXT CONTAINER */}
         <Box sx={styles.textContainer}>
-          <Box sx={styles.aboutText}>
+          <Box sx={styles.aboutTextContainer}>
             <Text
               as="h1"
-              style={{ fontFamily: "Bebas Neue, cursive", fontSize: "32px" }}
-            >
-              {" "}
-              Hi, I'm Jack{" "}
-            </Text>
-            <Text
-              as="p"
               style={{
-                fontFamily: "Montserrat, sans-serif",
-                fontWeight: "500",
+                fontFamily: "Bebas Neue, cursive",
+                fontSize: "40px",
+                fontWeight: "400",
               }}
             >
+              Hi, I'm Jack{" "}
+            </Text>
+            <Box sx={styles.aboutDescription}>
+            <Text as="p" sx={styles.aboutText}>
               I am a front-end web developer & Designer born in Tønsberg Norway,
               currently residing in salt lake city Utah. My interest in web
               development sparked a few years ago shortly after my 18th
-              birthday. I began self teaching HTML CSS and Javascript and after about 6 months of going through courses on Udemy and several other learning platforms i knew i wanted to take it a step further.
+              birthday. I began self teaching HTML CSS and Javascript and after
+              about 6 months of going through courses on Udemy and several other
+              learning platforms. I fell in love with the code quickly and took
+              it upon myself to enroll in a full stack development bootcamp.
             </Text>
+            <Text as="p" sx={styles.aboutText}>
+              Shortly after graduating the bootcamp i joined a crypto startup as
+              a full stack developer. I helped design and build discord bots,
+              nft websites, and portal pages for the network. As well as working
+              on the crypto project, decided to integrate what i was learning
+              with this company and use it in my own projects
+            </Text>
+            </Box>
           </Box>
         </Box>
       </Box>
@@ -66,15 +75,23 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     fontFamily: "Bebas Neue, cursive",
-    fontSize: "50px",
-    ml: "150px",
+    fontSize: ["35px", null, "50px"],
+    padding: ["30px"],
+    ml: [null, null, null, null, "10px", "90px", "120px"],
   },
-  aboutText: {
-    pt: "125px",
+  aboutTextContainer: {
     fontFamily: "Barlow Condensed, sans-serif",
     backgroundColor: "#E8EDEE",
-
+    padding: ["20px"],
   },
+  aboutText: {
+    fontSize: "26px",
+    fontFamily: "barlow condensed, sans-serif",
+    mt: "20px",
+  },
+  aboutDescription: {
+    
+  }
 };
 
 export default about;
