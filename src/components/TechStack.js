@@ -3,26 +3,26 @@ import {Box, Text, Flex, List, ListItem, UnorderedList} from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
 
 
-const TechStack = () => {
+const TechStack = ({project}) => {
 
 return (
     <Box sx={styles.wizard}> 
 <Box sx={styles.wizardStep}>
 <Box sx={styles.wizardDot}>
   <Box sx={styles.wizardNumber}>
-  <Icon style={{color:'white', fontSize: '35px',}} icon="akar-icons:react-fill"vFlip={true} />
+  {project.iconOne}
   </Box>
   <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px', transform: 'rotate(90deg)'}}/></Box>
   <Box sx={styles.wizardNumber}>
-  <Icon style={{color:'white', fontSize: '35px'}} icon="akar-icons:react-fill" vFlip={true} />
+{project.iconTwo}
   </Box>
   <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px', transform: 'rotate(90deg)'}}/></Box>
   <Box sx={styles.wizardNumber}>
-  <Icon style={{color:'white', fontSize: '35px'}} icon="akar-icons:react-fill" vFlip={true} />
+  {project.iconThree}
   </Box>
   <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px', transform: 'rotate(90deg)'}}/></Box>
   <Box sx={styles.wizardNumber}>
-  <Icon style={{color:'white', fontSize: '35px'}} icon="akar-icons:react-fill" vFlip={true} />
+  {project.iconFour}
   </Box>
 </Box>
 </Box>
@@ -67,6 +67,7 @@ const styles = {
   width: '110px',
   ml: '4px',
   mr: '4px',
+  color: 'white',
       },
       wizardDot: {
         alignItems:'center',

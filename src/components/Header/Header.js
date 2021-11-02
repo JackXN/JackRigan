@@ -12,7 +12,8 @@ function Header() {
             <Image src={'/LogoOne.png'} alt='Header Logo' sx={styles.headerImg}/>
             <Text as='h1' sx={styles.headerText}>Jack Rigan Is A Web Developer & Designer In Salt Lake City</Text>
             </Box>
-           <Navbar/>
+            <Navbar/>
+           
      </>
     )
 }

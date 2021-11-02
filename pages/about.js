@@ -82,7 +82,7 @@ const styles = {
   aboutTextContainer: {
     fontFamily: "Barlow Condensed, sans-serif",
     backgroundColor: "#E8EDEE",
-    padding: ["20px"],
+    padding: ["20px", '50px', '150px'],
   },
   aboutText: {
     fontSize: "26px",

@@ -23,7 +23,7 @@ const Footer = () => {
         </ListItem>
         <ListItem sx={styles.listItem}>
           <Link>
-            <Twitter />
+            <Twitter/>   
           </Link>
         </ListItem>
       </UnorderedList>

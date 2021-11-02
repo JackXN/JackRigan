@@ -6,6 +6,8 @@ import { Image } from "@chakra-ui/react";
 import Link from "next/link";
 import data from "../public/db";
 import Footer from "../src/components/Footer";
+import {DiReact as React } from 'react-icons'
+import {IoLogoJavascript as Javascript} from 'react-icons';
 export default function Home({ projects }) {
   return (
     <>
