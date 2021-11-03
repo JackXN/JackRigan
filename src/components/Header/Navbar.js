@@ -35,7 +35,15 @@ const styles = {
 
 fontFamily: 'Quicksand, san-serif',
     fontSize: "21px",
-    fontWeight: '600'
+    fontWeight: '600',
+
+
+    '&:hover': {
+      textDecoration: 'underline'
+    },
+    '&:active': {
+      color: 'orange',
+    }
   },
   list: {
     display: "flex",

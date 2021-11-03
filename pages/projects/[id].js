@@ -1,13 +1,9 @@
 import {Box, Text, Flex, List, ListItem, UnorderedList} from '@chakra-ui/react';
 import Header from '../../src/components/Header/Header';
-import Logo from '../../public/uberHero.jpeg';
-import Image from 'next/image';
-import { Icon } from '@iconify/react';
 import TechStack from '../../src/components/TechStack';
 import ProjectBanner from '../../src/components/ProjectBanner';
-import Bg from '../../public/bannerbg.png'
+
 import Head from 'next/head';
-import {IoLogoJavascript as Javascript} from 'react-icons';
 export const getStaticPaths = async () => {
   const res = await fetch(
     "https://my-json-server.typicode.com/JackXN/API-Rigan/projects"
