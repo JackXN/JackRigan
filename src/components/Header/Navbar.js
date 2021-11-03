@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { Box, ListItem, UnorderedList } from "@chakra-ui/react";
-// The regular link tag cant distinguish between active and non-active links so we need to use the router component built into next
 import { useRouter } from "next/router";
-;
+
 function Navbar() {
   const router = useRouter();
 
@@ -12,7 +11,7 @@ function Navbar() {
       <UnorderedList style={{ listStyle: "none" }} sx={styles.list}>
         <ListItem sx={styles.linkItem}>
         <Link href='/'>
-            <a className={router.pathname == '/' ? 'active' : ''}>
+            <a className={router.pathname === '/' ? 'active' : ''}>
            Portfolio
             </a>
             </Link>
@@ -41,9 +40,6 @@ fontFamily: 'Quicksand, san-serif',
     '&:hover': {
       textDecoration: 'underline'
     },
-    '&:active': {
-      color: 'orange',
-    }
   },
   list: {
     display: "flex",

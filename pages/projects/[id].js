@@ -52,7 +52,7 @@ const ProjectDetail = ({ project }) => {
 <Box>
 <TechStack project={project}/>
 </Box>
-  <ProjectBanner/>
+  <ProjectBanner project={project}/>
    </Box>
 
    </>
