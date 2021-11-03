@@ -31,13 +31,27 @@ const ProjectBanner = ({project}) => {
 const styles = {
 container: {
   display: 'flex',
-  flexDirection: ['column']
+  flexDirection: ['column'],
+  mt: ['150px'],
 },
 links: {
-  background: 'red'
+display: 'flex',
+flexDirection:'column',
+margin: ['20px'],
+mt: ['55px'],
+
 },
 linkItem: {
-  color: 'orange'
+  color: 'white',
+  margin: '10px',
+  listStyle: 'none',
+  fontSize: '23px',
+  fontFamily: 'Arapey,sans-serif',
+  textTransform: 'uppercase',
+  fontWeight: 'bold',
+  background: '#F06D69',
+  borderRadius:'10px',
+  padding: '10px',
 }
 };
 
