@@ -50,7 +50,7 @@ const data = [
     },
     {
       id: '8',
-      imgSrc: 'DLogo.jpeg',
+      imgSrc: 'DLogo.png',
       title: 'Devnicks',
       description: 'A Web Development And Design Landing Page',
       
