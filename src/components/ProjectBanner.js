@@ -38,15 +38,14 @@ links: {
 display: 'flex',
 flexDirection:'column',
 margin: ['20px'],
-mt: ['55px'],
-
+mt: ['90px'],
 },
 linkItem: {
   color: 'white',
   margin: '10px',
   listStyle: 'none',
-  fontSize: '23px',
-  fontFamily: 'Arapey,sans-serif',
+  fontSize: '25px',
+  fontFamily: "Bebas Neue, cursive",
   textTransform: 'uppercase',
   fontWeight: 'bold',
   background: '#F06D69',

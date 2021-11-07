@@ -1,16 +1,26 @@
 
-import {Box, Text, Flex, List, ListItem, UnorderedList} from '@chakra-ui/react';
+import {Box, Text, Flex, List, ListItem, UnorderedList, Image} from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
 
 
 const TechStack = ({project}) => {
+
+
+  const data = [
+    {
+      id: 1,
+      name: 'React Icon',
+
+      
+    }
+  ]
 
 return (
     <Box sx={styles.wizard}> 
 <Box sx={styles.wizardStep}>
 <Box sx={styles.wizardDot}>
   <Box sx={styles.wizardNumber}>
-  {project.iconOne}
+ <Image src={project.iconOne} alt='yo'/>
   </Box>
   <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px', transform: 'rotate(90deg)'}}/></Box>
   <Box sx={styles.wizardNumber}>

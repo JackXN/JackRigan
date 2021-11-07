@@ -23,6 +23,9 @@ export default function Home({ projects }) {
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap"
             rel="stylesheet"
           />
+
+          {/* Icons */}
+          <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet"/>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
