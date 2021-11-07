@@ -8,7 +8,7 @@ const ProjectBanner = ({project}) => {
   return (
     <>
    <Box sx={styles.container}>
-<Image src={project.imgOne} alt={project.title}/>
+<Image src={project.imgOne} alt={project.title} sx={styles.img}/>
 <Box sx={styles.links}>
 <UnorderedList>
   <ListItem sx={styles.linkItem}>
@@ -31,26 +31,32 @@ const ProjectBanner = ({project}) => {
 const styles = {
 container: {
   display: 'flex',
-  flexDirection: ['column'],
+  flexDirection: ['column', null, null, 'row'],
   mt: ['150px'],
 },
 links: {
 display: 'flex',
 flexDirection:'column',
-margin: ['20px'],
+margin: ['20px', '30px'],
 mt: ['90px'],
 },
 linkItem: {
   color: 'white',
-  margin: '10px',
+  margin: ['10px', null, null, '60px'],
   listStyle: 'none',
-  fontSize: '25px',
+  // width: '500px',
+  fontSize: ['25px', '25px', '25px', '35px'],
   fontFamily: "Bebas Neue, cursive",
   textTransform: 'uppercase',
   fontWeight: 'bold',
   background: '#F06D69',
-  borderRadius:'10px',
-  padding: '10px',
+  borderRadius:['20px', null, null,null, '30px'],
+  padding: ['10px', null , null, '30px'],
+},
+img: {
+height: ['400px', null, null, '500px'],
+width: ['400px', null, null, '500px'],
+mb: ['100px'],
 }
 };
 

@@ -6,33 +6,24 @@ import { Icon } from '@iconify/react';
 const TechStack = ({project}) => {
 
 
-  const data = [
-    {
-      id: 1,
-      name: 'React Icon',
-
-      
-    }
-  ]
-
 return (
     <Box sx={styles.wizard}> 
 <Box sx={styles.wizardStep}>
 <Box sx={styles.wizardDot}>
   <Box sx={styles.wizardNumber}>
- <Image src={project.iconOne} alt='yo'/>
+ <Image src={project.iconOne} alt={project.title}/>
   </Box>
   <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px', transform: 'rotate(90deg)'}}/></Box>
   <Box sx={styles.wizardNumber}>
-{project.iconTwo}
+<Image src={project.iconTwo} alt={project.title}/>
   </Box>
   <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px', transform: 'rotate(90deg)'}}/></Box>
   <Box sx={styles.wizardNumber}>
-  {project.iconThree}
+  <Image src={project.iconThree} alt={project.title}/>
   </Box>
   <Box sx={styles.wizardConnector}><Icon icon="ci:line-l" vFlip={true} style={{color:'#F06D6A', fontSize: '20px', transform: 'rotate(90deg)'}}/></Box>
   <Box sx={styles.wizardNumber}>
-  {project.iconFour}
+  <Image src={project.iconFour} alt={project.title}/>
   </Box>
 </Box>
 </Box>
@@ -48,10 +39,6 @@ const styles = {
   
             },
             wizardStep: {
-  
-  "&:first-child": {
-   backgroundColor: 'transparent',
-  },
   
   "&:last-child": {
     backgroundColor: 'transparent',
