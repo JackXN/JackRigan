@@ -13,6 +13,7 @@ const ProjectBanner = ({project}) => {
 <UnorderedList style={{listStyle: 'none'}}>
   <ListItem>
   <Button
+    href={project.liveUrl}
             sx={styles.buttons.primary}
             as="button"
             _hover={{
