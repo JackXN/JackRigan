@@ -28,7 +28,7 @@ function about() {
                 fontWeight: "400",
               }}
             >
-              Hi, I'm Jack{" "}
+              Hi, Im Jack{" "}
             </Text>
             <Box sx={styles.aboutDescription}>
             <Text as="p" sx={styles.aboutText}>
