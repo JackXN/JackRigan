@@ -1,9 +1,13 @@
 
 import {Box, Text, Flex, List, ListItem, UnorderedList, Image} from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
+import data from '../../public/db';
+
+
 
 
 const TechStack = ({project}) => {
+
 
 
 return (
