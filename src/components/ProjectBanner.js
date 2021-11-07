@@ -10,7 +10,7 @@ const ProjectBanner = ({project}) => {
    <Box sx={styles.container}>
 <Image src={project.imgOne} alt={project.title} sx={styles.img}/>
 <Box sx={styles.links}>
-<UnorderedList>
+<UnorderedList style={{listStyle: 'none'}}>
   <ListItem>
   <Button
             sx={styles.buttons.primary}
@@ -26,7 +26,7 @@ const ProjectBanner = ({project}) => {
             color="orange"
             transition="0.25s"
           >
-            Learn More
+          View Live Project
           </Button>
           </ListItem>
           <ListItem>
@@ -44,7 +44,7 @@ const ProjectBanner = ({project}) => {
             color="orange"
             transition="0.25s"
           >
-            Learn More
+            Read The Documentation
           </Button>
           </ListItem>
 </UnorderedList>
@@ -70,7 +70,6 @@ linkItem: {
   color: 'white',
   margin: ['10px', null, null, '60px'],
   listStyle: 'none',
-  // width: '150px',
   fontSize: ['25px', '25px', '25px', '35px'],
   fontFamily: "Bebas Neue, cursive",
   textTransform: 'uppercase',
@@ -100,14 +99,14 @@ mb: ['100px'],
       mt: [null, null, null, "20px"],
     },
     primary: {
-      padding: "25px",
+      padding: "35px",
       margin: "10px",
       ml: "-20px",
-      background: "linear-gradient(to right, #040405 50%, #AD0541 50%)",
+      background: "linear-gradient(to right, #1B1F23 50%, #F06D69 50%)",
       color: "white",
       transition: "all .5s ease-out",
       borderRadius: "none",
-      fontSize: ["15px", null, "20px", "25px"],
+      fontSize: ["15px", null, "20px", "30px"],
       backgroundPosition: " right bottom",
       backgroundSize: "200% 100%",
       transition: "0.25s",
@@ -124,7 +123,7 @@ mb: ['100px'],
       padding: "25px",
       margin: "10px",
       ml: "20px",
-      background: "linear-gradient(to right, #040405 50%, #191A1A 50%)",
+      background: "linear-gradient(to right, orange 50%, #191A1A 50%)",
       color: "white",
       transition: "all .5s ease-out",
       borderRadius: "none",
